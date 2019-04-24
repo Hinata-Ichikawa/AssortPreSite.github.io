@@ -1,0 +1,694 @@
+body{
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	letter-spacing: .5rem;
+	overflow-x: hidden;
+	margin: 0;
+}
+
+.PortraitBg{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 999;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.PortraitBg-Img{
+	width: 50%;
+	margin-bottom: 30px;
+}
+
+.PortraitBg-Text{
+	color: #fff;
+	text-align: center;
+}
+
+.Page{
+	position: relative;
+  height: 100vh;
+  text-align: center;
+/*  border-bottom: 1px solid #00a99d;*/
+}
+
+.Top{
+	display: flex;
+	justify-content: center;
+	align-items: middle;
+	flex-direction: column-reverse;
+}
+
+.Top-Logo{
+	margin-right: auto;
+	margin-left: auto;
+	width: 65%;
+	height: 190px;
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9{
+	fill: none;
+	stroke-dasharray: 2000;/*線の間隔を指定する*/
+  stroke-dashoffset: 0;/*線の位置を指定する(IEは効かない属性)*/
+  stroke-width: 1;/*線の太さを指定する*/
+  stroke-dashoffset: 2000;
+}
+
+.cls-1,
+.cls-8{
+	stroke: #00a89c;
+}
+
+.cls-2{
+	stroke: #317c7c;
+}
+
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7{
+	stroke: #333;
+}
+
+.cls-9{
+	fill: #fefefe;
+}
+
+.cls-1{
+	animation: light-blue 2s ease-in 2s forwards;
+}
+
+.cls-2{
+	animation: blue 2s ease-in 2.3s forwards;
+}
+
+.cls-3{
+	animation: black 2s ease-in 2.6s forwards;
+}
+
+.cls-4{
+	animation: black 2s ease-in 2.9s forwards;
+}
+
+.cls-5{
+	animation: black 2s ease-in 3.2s forwards;
+}
+
+.cls-6{
+	animation: black 2s ease-in 3.5s forwards;
+}
+
+.cls-7{
+	animation: black 2s ease-in 3.8s forwards;
+}
+
+.cls-8{
+	animation: light-blue 2s ease-in 4.1s forwards;
+}
+
+@keyframes black {
+	0% {
+	 stroke-dashoffset: 2000;
+	 fill:transparent; /*透過*/
+	}
+	50% {
+	 fill:transparent; /*透過*/
+	}
+	100% {
+	 stroke-dashoffset: 0;
+	 fill: #333;
+	}
+}
+
+@keyframes light-blue {
+	0% {
+	 stroke-dashoffset: 2000;
+	 fill:transparent; /*透過*/
+	}
+	50% {
+	 fill:transparent; /*透過*/
+	}
+	100% {
+	 stroke-dashoffset: 0;
+	 fill: #00a89c;
+	}
+}
+
+@keyframes blue {
+	0% {
+	 stroke-dashoffset: 2000;
+	 fill:transparent; /*透過*/
+	}
+	50% {
+	 fill:transparent; /*透過*/
+	}
+	100% {
+	 stroke-dashoffset: 0;
+	 fill: #317c7c;
+	}
+}
+
+.Top-LogoText{
+	margin: 0;
+	font-size: 1em;
+	color: #333;
+	letter-spacing: 1.2rem;
+}
+
+.About{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.About-Title{
+	margin: 0;
+	text-indent: -9999px;
+}
+
+.About-Text{
+	line-height: 110px;
+}
+
+.About-Logo{
+	width: 250px;
+}
+
+.About-TextBig{
+	visibility: hidden;
+	font-size: 1.5em;
+	letter-spacing: 1.2rem;
+}
+
+.Page-Title{
+	color: #317c7c;
+	font-size: 30px;
+	margin-top: 0;
+	padding-top: 60px;
+}
+
+.Takucho-Img{
+	width: 350px;
+	height: 350px;
+	object-fit: cover;
+}
+
+.Takucho-Name{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.Takucho-Class::after{
+	content: " ";
+}
+
+.Takucho-NameSmall{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+.Theme-Theme{
+	font-size: 40px;
+}
+
+.Theme-Times::before,
+.Theme-Times::after{
+	content: "  ";
+}
+
+.Theme-Explain{
+	margin-top: 70px;
+}
+
+.Theme-Heading::after{
+	content: "...";
+}
+
+.Theme-UX{
+	visibility: hidden;
+	color: #df5f58;
+}
+
+.Schedule-ContentsBox{
+	position: absolute;
+	width: 100vw;
+	height: 70vh;
+	display: flex;
+	justify-content: space-around;
+}
+
+.Schedule-Contents{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.Schedule-ContentsTitle:hover{
+	transform: scale(1.2);
+	transition: .3s;
+}
+
+.Schedule-Contents:nth-child(even){
+	justify-content: flex-end;
+}
+
+.Schedule-ContentsTitle{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	background-color: #00a99d;
+	font-size: 16px;
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+	letter-spacing: .3rem;
+	margin-bottom: 15px;
+}
+
+.Schedule-ContentsText{
+	color: #00a99d;
+	font-size: 14px;
+	letter-spacing: .1rem;
+	margin-left: 0;
+}
+
+.Schedule-Calender{
+	display: flex;
+	justify-content: space-between;
+	width: 90vw;
+	height: 20px;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	padding-left: 0;
+	letter-spacing: .2rem;
+}
+
+.Schedule-CalenderList{
+	list-style: none;
+	font-size: 20px;
+}
+
+.Schedule-CalenderLine{
+	width: 90vw;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #b3b3b3;
+	margin-right: auto;
+	margin-left: auto;
+	position: absolute;
+	top: 100px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+
+.Restriction-HideTitle{
+	text-indent: -9999px;
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 0;
+}
+
+.Restriction-Title{
+	padding-bottom: 10px;
+}
+
+.Restriction-Text{
+	visibility: hidden;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.Restriction-TextSmall{
+/*	visibility: hidden;*/
+	font-size: 20px;
+	margin-top: 0;
+}
+
+.Support-HideTitle{
+	text-indent: -9999px;
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 0;
+}
+
+.Support-List{
+	text-align: left;
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.Support-Text{
+	visibility: hidden;
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+.Last-Logo{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.Last-Text { 
+	visibility: hidden;
+	color: #333;
+	position: absolute;
+	border-right: .1em solid black;
+	width: 100%; 
+/*	width: 21ch;*/
+	margin: 150px 1em 0 0;
+	white-space: nowrap;
+	overflow: hidden;
+/*	-webkit-animation: typing 3s steps(33, end),
+  blink-caret .5s step-end infinite alternate;*/
+}
+
+.Asset1{
+	position: absolute;
+	width: 400px;
+	left: -40px;
+	opacity: .2;
+	z-index: -999;
+}
+
+.Asset2{
+	position: absolute;
+	width: 300px;
+	right: -150px;
+	opacity: .2;
+	z-index: -999;
+}
+
+.Asset3{
+	position: absolute;
+	width: 400px;
+	left: -100px;
+	opacity: .2;
+	z-index: -999;
+}
+
+.Asset4{
+	position: absolute;
+	width: 400px;
+	top: -1000px;
+	right: -150px;
+	opacity: .2;
+	z-index: -999;
+}
+
+.Asset5{
+	position: absolute;
+	width: 300px;
+	top: 1000px;
+	left: -50px;
+	opacity: .2;
+	z-index: -999;
+}
+
+
+
+
+
+
+.ProgramImg{
+	position: absolute;
+	right: 100px;
+	top: 100px;
+	width: 200px;
+	animation: program 2s infinite; 
+}
+
+@keyframes program{
+	0%{
+		transform: rotate(0deg);
+	}
+
+	30%{
+		transform: rotate(-30deg)
+	}
+	70%{
+		transform: rotate(390deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+.HakeImg{
+	position: absolute;
+	left: 100px;
+	top: 200px;
+	width: 200px;
+	animation: hake 3s infinite; 
+}
+
+@keyframes hake{
+	0%{
+		transform: rotate(0deg) translateX(-300px);
+	}
+	30%{
+		transform: rotate(-30deg) translateX(100px);;
+	}
+	70%{
+		transform: rotate(390deg) translateX(100px);;
+	}
+	100%{
+		transform: rotate(360deg) translateY(300px) translateX(-400px);
+	}
+}
+
+.PenImg{
+	position: absolute;
+	left: -200px;
+	top: 360px;
+	width: 160px;
+	animation: pen 3s infinite; 
+}
+
+@keyframes pen{
+	0%{
+		transform: translateX(0px);
+	}
+	60%{
+		transform: translateX(1200px);
+	}
+	90%{
+		transform: translateX(1200px) rotate(360deg);
+	}
+	100%{
+		transform: translateX(1600px);
+	}
+}
+
+.SeasarImg{
+	position: absolute;
+	left: -200px;
+	top: 440px;
+	width: 160px;
+	animation: seasar 7s infinite; 
+	z-index: -999;
+}
+
+@keyframes seasar{
+	0%{
+		transform: translateX(0px);
+	}
+	20%{
+		transform: translateX(300px) translateY(0px);
+	}
+	40%{
+		transform: translateX(600px) translateY(-300px);
+	}
+	60%{
+		transform: translateX(900px) translateY(0px);
+	}
+	80%{
+		transform: translateX(1200px) translateY(-300px);
+	}
+	100%{
+		transform: translateX(1500px) translateY(-300px);
+	}
+}
+
+
+
+
+
+
+@media screen and (max-width: 896px) and (orientation: landscape){
+	body{
+		font-size: 16px;
+	}
+	.Page-Title{
+		font-size: 20px;
+		padding-top: 20px;
+	}
+
+	.Top-Logo{
+		height: 130px;
+	}
+
+	.Top-LogoText{
+		font-size: 24px;
+	}
+
+	.About{
+		font-size: 20px;
+	}
+
+	.About-Text{
+		line-height: 70px;
+	}
+
+	.About-TextBig{
+		font-size: 24px;
+		letter-spacing: .5em;
+	}
+
+	.ProgramImg{
+		width: 100px;
+		right: 20px;
+	}
+
+	.Takucho-Img{
+		width: 150px;
+		height: 150px;
+	}
+
+	.Takucho-NameSmall{
+		font-size: 16px;
+	}
+
+	.HakeImg{
+		width: 100px;
+	}
+
+	.Theme-Theme{
+		font-size: 24px;
+		margin-bottom: 0;
+	}
+
+	.Theme-Explain {
+    margin-top: 20px;
+	}
+
+	.PenImg{
+		display: none;
+	}
+
+	.Schedule-Title{
+		margin-bottom: 5px;
+	}
+
+	.Schedule-ContentsBox{
+		height: 270px;
+	}
+
+	.Schedule-ContentsTitle{
+		width: 80px;
+		height: 80px;
+		font-size: 11px;
+		margin-bottom: 5px;
+		letter-spacing: .2em;
+	}
+
+	.Schedule-Calender{
+		top: 20px;
+	}
+
+	.Schedule-CalenderList{
+		font-size: 11px;
+	}
+
+	.Schedule-ContentsText{
+		font-size: 10px;
+		letter-spacing: 0;
+	}
+
+	.Schedule-CalenderLine{
+		height: 5px;
+		top: 40px;
+	}
+
+	.SeasarImg{
+		display: none;
+	}
+
+	.Restriction-Title{
+		font-size: 16px;
+		padding-top: 20px;
+		padding-bottom: 10px;
+	}
+
+	.Restriction-Text{
+		font-size: 12px;
+	}
+
+	.Restriction-TextSmall{
+		font-size: 10px;
+		letter-spacing: .1em;
+	}
+
+	.Support-Title{
+		font-size: 16px;
+	}
+
+	.Support-Text{
+		font-size: 12px;
+		letter-spacing: .1em;
+		margin-bottom: 20px;
+	}
+
+	.Last-Logo{
+		width: 60%;
+	}
+
+	.Last-Text{
+		margin-top: 80px;
+		letter-spacing: .2em;
+	}
+
+	.Asset2,
+	.Asset3{
+		display: none;
+	}
+
+	.Asset1,
+	.Asset4,
+	.Asset5{
+		width: 200px;
+	}
+
+	.Asset5{
+		top: 0;
+	}
