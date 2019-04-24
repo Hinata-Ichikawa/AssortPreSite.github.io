@@ -33,19 +33,6 @@ $(window).on('load orientationchange resize', function(){
         $('.PortraitBg').css("display","flex");
         $('body').css("overflow","hidden");
     }
-
-    $(function () {
-	    var ua = navigator.userAgent;
-	    if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
-	        // スマートフォン用コード
-	    } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
-	        // タブレット用コード
-	    } else {
-	        // PC用コード
-	        $('.PortraitBg').css("display","none");
-	        $('body').css("overflow","visible");
-	    }
-	})
 });
 
 $(function () {
